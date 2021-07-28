@@ -5,9 +5,10 @@
     "start": "vite",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "go:build": "cd ./src-tauri && make build",
     "tauri": "tauri",
-    "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
+    "tauri:dev": "npm run go:build && tauri dev",
+    "tauri:build": "npm run go:build && tauri build"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-beta.4",

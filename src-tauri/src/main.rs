@@ -10,7 +10,29 @@
 mod cmd;
 
 use serde::Serialize;
+use std::ffi::{CStr, CString};
+use std::os::raw::c_char;
 use std::sync::{Arc, Mutex};
+
+type GoInt64 = ::std::os::raw::c_longlong;
+
+#[derive(Debug)]
+#[repr(C)]
+struct GoString {
+  a: *const c_char,
+  b: i64,
+}
+
+extern "C" {
+  fn Concat(str: GoString) -> *const c_char;
+  fn Timestamp() -> GoInt64;
+  fn Add(nb1: i64, nb2: i64) -> i64;
+  fn Divide(nb1: f64, nb2: f64) -> f64;
+  fn Sort(val: Vec<i32>) -> Vec<i32>;
+  fn IsCorrect() -> bool;
+  fn MutateInt(i: &i32);
+  fn MutateStr(str: &GoString);
+}
 
 #[derive(Serialize)]
 struct Reply {
@@ -18,15 +40,29 @@ struct Reply {
 }
 
 fn main() {
+  // ex_1
+  // call Go with one string and retrieve a string
+  let s = CString::new("I'm a Rustacean").expect("CString::new failed");
+  let ptr = s.as_ptr();
+  let input = GoString {
+    a: ptr,
+    b: s.as_bytes().len() as i64,
+  };
+
+  let concat_res = unsafe { Concat(input) };
+  let c_str = unsafe { CStr::from_ptr(concat_res) };
+  let output = c_str.to_str().expect("to_str failed");
+  println!("concat: {}", output);
+
+  // during dev if reload, don t listen multiple times same event
   let cptLoad = Arc::new(Mutex::new(0));
 
   tauri::Builder::default()
     .on_page_load(move |window, _| {
       let mut _cptLoad = cptLoad.lock().unwrap();
 
+      let window_ = window.clone();
       if *_cptLoad == 0 {
-        let window_ = window.clone();
-
         window.listen("js-event", move |event| {
           println!("got js-event with message '{:?}'", event.payload());
           let reply = Reply {

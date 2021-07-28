@@ -5,6 +5,12 @@
 use tauri_build::{try_build, Attributes, WindowsAttributes};
 
 fn main() {
+  let path = "./golib";
+  let lib = "gophernize";
+
+  println!("cargo:rustc-link-search=native={}", path);
+  println!("cargo:rustc-link-lib=static={}", lib);
+
   if let Err(error) = try_build(
     Attributes::new()
       .windows_attributes(WindowsAttributes::new().window_icon_path("../icons/icon.ico")),
