@@ -13,7 +13,7 @@ pub fn greet(name: &str) {
 }
 
 #[wasm_bindgen]
-pub fn add(nb1: u32, nb2: u32) -> u32 {
+pub fn add(nb1: f32, nb2: f32) -> f32 {
     nb1 + nb2
 }
 
