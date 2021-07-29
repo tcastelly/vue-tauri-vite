@@ -21,6 +21,9 @@ export default defineConfig({
   },
   server: {
     port: 3222,
-  }
+    hmr: {
+      overlay: false,
+    },
+  },
 });
 
