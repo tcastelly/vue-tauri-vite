@@ -55,14 +55,14 @@ fn main() {
   println!("concat: {}", output);
 
   // during dev if reload, don t listen multiple times same event
-  let cptLoad = Arc::new(Mutex::new(0));
+  let cpt_load = Arc::new(Mutex::new(0));
 
   tauri::Builder::default()
     .on_page_load(move |window, _| {
-      let mut _cptLoad = cptLoad.lock().unwrap();
+      let mut cpt_load_ = cpt_load.lock().unwrap();
 
       let window_ = window.clone();
-      if *_cptLoad == 0 {
+      if *cpt_load_ == 0 {
         window.listen("js-event", move |event| {
           println!("got js-event with message '{:?}'", event.payload());
           let reply = Reply {
@@ -75,7 +75,7 @@ fn main() {
         });
       }
 
-      *_cptLoad += 1;
+      *cpt_load_ += 1;
     })
     .invoke_handler(tauri::generate_handler![
       cmd::log_operation,
