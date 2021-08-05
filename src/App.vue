@@ -12,11 +12,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue';
 import { listen, emit } from '@tauri-apps/api/event';
 import { invoke } from '@tauri-apps/api/tauri';
 import HelloTsx from './components/HelloTsx';
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
 import Add from './components/Add';
 
 export default defineComponent({
@@ -24,16 +24,16 @@ export default defineComponent({
   components: {
     HelloTsx,
     Add,
-    HelloWorld
+    HelloWorld,
   },
   setup() {
     const res = ref('default');
 
-    invoke("perform_request", {
-      endpoint: "dummy endpoint arg",
+    invoke('perform_request', {
+      endpoint: 'dummy endpoint arg',
       body: {
         id: 5,
-        name: "test",
+        name: 'test',
       },
     })
       .then((m) => console.log(m))
@@ -48,16 +48,16 @@ export default defineComponent({
     }, 1000);
 
     const log = () => invoke('log_operation', {
-      event: "will be logged",
-      payload: "data"
+      event: 'will be logged',
+      payload: 'data',
     });
 
     return {
       res,
       log,
-    }
-  }
-})
+    };
+  },
+});
 </script>
 
 <style>

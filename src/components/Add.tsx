@@ -1,4 +1,8 @@
-import { computed, defineComponent, ref, watchEffect } from 'vue';
+import {
+  defineComponent,
+  ref,
+  watchEffect,
+} from 'vue';
 import { add } from 'wasm-rust';
 
 export default defineComponent({
@@ -21,5 +25,5 @@ export default defineComponent({
       =
       <span>{res.value}</span>
     </>;
-  }
+  },
 });
