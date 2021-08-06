@@ -38,7 +38,6 @@ jobs:
       - name: install app dependencies and build it
         run: |
           npm ci
-          npm run rsw:deploy
           npm run build
       - uses: tauri-apps/tauri-action@v0
         env:
