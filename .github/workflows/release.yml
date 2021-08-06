@@ -37,9 +37,8 @@ jobs:
           sudo apt-get install -y webkit2gtk-4.0
       - name: install app dependencies and build it
         run: |
-          curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
           npm ci
-          npm run initwasm
+          npm run rsw:deploy
           npm run build
       - uses: tauri-apps/tauri-action@v0
         env:
