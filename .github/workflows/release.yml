@@ -39,7 +39,7 @@ jobs:
         run: |
           curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
           npm ci
-          npm run dev -- --port 1 --strictPort true 2> /dev/null
+          npm run initwasm
           npm run build
       - uses: tauri-apps/tauri-action@v0
         env:
