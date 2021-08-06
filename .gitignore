@@ -3,6 +3,9 @@ node_modules
 /dist
 target
 
+*.a
+*.h
+
 
 # local env files
 .env.local
@@ -13,6 +16,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+wasm-rsut/pkg
+wasm-rsut/target
 
 # Editor directories and files
 .idea

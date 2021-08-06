@@ -1,4 +1,11 @@
 import { createApp } from 'vue'
+import rustWasmInit from 'wasm-rust';
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const main = async () => {
+  await rustWasmInit();
+
+  createApp(App).mount('#app')
+};
+
+main();

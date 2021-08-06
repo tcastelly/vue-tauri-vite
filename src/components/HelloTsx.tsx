@@ -1,3 +1,3 @@
 export default function () {
-  return <h1>Hey</h1>;
+  return <h3>With TSX</h3>;
 }
