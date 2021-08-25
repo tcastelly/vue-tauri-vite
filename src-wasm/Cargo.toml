@@ -1,7 +1,7 @@
 [package]
-name = "wasm-rust"
+name = "src-wasm"
 version = "0.1.0"
-authors = ["lencx <cxin1314@gmail.com>"]
+authors = ["Thomas <thomas@tcy.io>"]
 edition = "2018"
 
 # https://github.com/rustwasm/wasm-pack/issues/886

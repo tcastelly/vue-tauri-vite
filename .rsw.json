@@ -1,5 +1,5 @@
 {
   "crates": [
-    "wasm-rust"
+    "src-wasm"
   ]
 }

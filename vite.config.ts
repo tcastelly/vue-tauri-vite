@@ -10,8 +10,8 @@ export default defineConfig({
     vueJsx(),
     ViteRsw({
       crates: [
-        'wasm-rust',
-      ]
+        'src-wasm',
+      ],
     }),
   ],
   resolve: {
@@ -26,4 +26,3 @@ export default defineConfig({
     },
   },
 });
-
