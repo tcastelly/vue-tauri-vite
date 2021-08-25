@@ -11,6 +11,7 @@
     "lint:tsc": "eslint --quiet \"{tests,src}/**/*.{js,ts,tsx,vue}\" && npm run check-types",
     "lint:eslint": "eslint --ext .jsx,.js,.ts,.tsx,.vue src/",
     "lint:fix": "eslint --ext .jsx,.js,.ts,.tsx,.vue src/ --fix",
+    "tauri:osxconfig": "cp ./src-tauri/.cargo/config_disabled ./src-tauri/.cargo/config",
     "go:build": "make build",
     "tauri": "tauri",
     "tauri:dev": "npm run go:build && tauri dev",

@@ -18,27 +18,39 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+
       - name: Install Go
         uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go-version }}
+
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Build Go FFI
         run: make build
+
       - name: install Rust stable
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+
       - name: install webkit2gtk (ubuntu only)
         if: matrix.platform == 'ubuntu-latest'
         run: |
           sudo apt-get update
           sudo apt-get install -y webkit2gtk-4.0
+
       - name: install app dependencies
         run: |
           npm ci
-      - uses: tauri-apps/tauri-action@v0
+
+      - name: generate osx cargo config
+        if: matrix.platform == 'macos-latest'
+        run: make init_osx_cfg
+
+      - name: tauri release
+        uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
