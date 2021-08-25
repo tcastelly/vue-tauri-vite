@@ -20,6 +20,9 @@ module.exports = {
     // will be resolve by TS
     'import/no-unresolved': 0,
 
+    // let ts manage modules
+    'import/no-extraneous-dependencies': 0,
+
     // fix export/import default
     'import/no-named-as-default': 0,
 
