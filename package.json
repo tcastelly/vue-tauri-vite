@@ -11,7 +11,7 @@
     "lint:tsc": "eslint --quiet \"{tests,src}/**/*.{js,ts,tsx,vue}\" && npm run check-types",
     "lint:eslint": "eslint --ext .jsx,.js,.ts,.tsx,.vue src/",
     "lint:fix": "eslint --ext .jsx,.js,.ts,.tsx,.vue src/ --fix",
-    "go:build": "cd ./src-tauri && make build",
+    "go:build": "make build",
     "tauri": "tauri",
     "tauri:dev": "npm run go:build && tauri dev",
     "tauri:build": "npm run go:build && tauri build"
