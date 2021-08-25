@@ -5,6 +5,7 @@ target
 
 *.a
 *.h
+.rsw
 
 
 # local env files
