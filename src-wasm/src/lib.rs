@@ -1,3 +1,5 @@
+pub mod my_cmp;
+
 use wasm_bindgen::prelude::*;
 
 // Import the `window.alert` function from the Web.
