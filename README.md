@@ -34,3 +34,4 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 
   > cargo update -p tauri
   # https://crates.io/crates/tauri/versions
+  # https://crates.io/crates/tauri-build/versions
