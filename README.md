@@ -1,6 +1,6 @@
 # Tauri Application
 
-In this projec I try to show how use in a Tauri application multiple technologies as:
+In this project I try to show how use in a Tauri application multiple technologies as:
 - VueJS with TypesScript
 - Wasm (Rust)
 - Vite for the client bundle
