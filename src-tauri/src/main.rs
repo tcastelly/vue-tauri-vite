@@ -10,6 +10,7 @@
 mod cmd;
 
 use serde::Serialize;
+use std::collections::HashMap;
 use std::ffi::{CStr, CString};
 use std::os::raw::c_char;
 use std::sync::{Arc, Mutex};
@@ -39,6 +40,8 @@ struct Reply {
   data: String,
 }
 
+pub struct MyState(HashMap<String, String>);
+
 fn main() {
   // ex_1
   // call Go with one string and retrieve a string
@@ -57,7 +60,10 @@ fn main() {
   // during dev if reload, don t listen multiple times same event
   let cpt_load = Arc::new(Mutex::new(0));
 
+  let state = HashMap::from([("key".to_string(), "value".to_string())]);
+
   tauri::Builder::default()
+    .manage(MyState(state))
     .on_page_load(move |window, _| {
       let mut cpt_load_ = cpt_load.lock().unwrap();
 
@@ -79,7 +85,8 @@ fn main() {
     })
     .invoke_handler(tauri::generate_handler![
       cmd::log_operation,
-      cmd::perform_request
+      cmd::perform_request,
+      cmd::read_state,
     ])
     .run(tauri::generate_context!())
     .expect("error while running tauri application");

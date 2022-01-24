@@ -8,6 +8,10 @@
 
     <button @click="log">Log me</button>
   </div>
+
+  <div>
+    <button @click="getState">Get State</button>
+  </div>
   <Add />
 </template>
 
@@ -52,9 +56,12 @@ export default defineComponent({
       payload: 'data',
     });
 
+    const getState = () => invoke('read_state');
+
     return {
       res,
       log,
+      getState,
     };
   },
 });
