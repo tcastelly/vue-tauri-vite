@@ -2,20 +2,20 @@
   "name": "vite-vue",
   "version": "0.0.5",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
     "prebuild": "rsw",
     "build": "vite build",
     "check-types": "tsc --noemit --skipLibCheck",
+    "dev": "vite",
+    "go:build": "make build",
     "lint": "npm run lint:eslint && npm run lint:tsc",
-    "lint:tsc": "eslint --quiet \"{tests,src}/**/*.{js,ts,tsx,vue}\" && npm run check-types",
     "lint:eslint": "eslint --ext .jsx,.js,.ts,.tsx,.vue src/",
     "lint:fix": "eslint --ext .jsx,.js,.ts,.tsx,.vue src/ --fix",
-    "tauri:osxconfig": "cp ./src-tauri/.cargo/config_disabled ./src-tauri/.cargo/config",
-    "go:build": "make build",
+    "lint:tsc": "eslint --quiet \"{tests,src}/**/*.{js,ts,tsx,vue}\" && npm run check-types",
+    "start": "vite",
     "tauri": "tauri",
+    "tauri:build": "npm run go:build && tauri build",
     "tauri:dev": "npm run go:build && tauri dev",
-    "tauri:build": "npm run go:build && tauri build"
+    "tauri:osxconfig": "cp ./src-tauri/.cargo/config_disabled ./src-tauri/.cargo/config"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-beta.8",

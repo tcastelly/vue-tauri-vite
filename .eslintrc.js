@@ -17,11 +17,11 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'func-names': 0,
 
-    // will be resolve by TS
-    'import/no-unresolved': 0,
-
     // let ts manage modules
     'import/no-extraneous-dependencies': 0,
+
+    // will be resolve by TS
+    'import/no-unresolved': 0,
 
     // fix export/import default
     'import/no-named-as-default': 0,
@@ -32,5 +32,6 @@ module.exports = {
 
     // fix tsx component
     'import/prefer-default-export': 0,
+
   },
 };
