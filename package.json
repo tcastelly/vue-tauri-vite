@@ -1,6 +1,7 @@
 {
   "name": "vite-vue",
   "version": "0.0.5",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rsw build",
     "build": "vite build",
