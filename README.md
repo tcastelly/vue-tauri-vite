@@ -1,22 +1,36 @@
 # Tauri Application
 
-In this project I try to show how use in a Tauri application multiple technologies as:
+In this project I try to show how to use Tauri application with multiple technologies as:
 - VueJS with TypesScript
 - Wasm (Rust)
 - Vite for the client bundle
 - Go and Rust as backend thanks to ffi
 
-### Update Tauri
+### Launch dev
+
+⚠️ Note: Open two terminal windows, execute `npm run watch` in the first and `npm run tauri:dev` in the second. **The order of execution is important, do not close the first window!**
+
+### Update Dependencies
 
 - Javascript part: `ncu`
 - Rust part: 
   > cd src-tauri
 
   > cargo update -p tauri
+  - and check
   - https://crates.io/crates/tauri/versions
   - https://crates.io/crates/tauri-build/versions
 
-### Launch dev
+### Release build
+## Github Actions
+Take a look to:
+https://github.com/tcastelly/vue-tauri-vite/blob/master/.github/workflows/release.yml
 
-⚠️ Note: Open two terminal windows, execute `npm run watch` in the first and `npm run tauri:dev` in the second. **The order of execution is important, do not close the first window!**
+## Manual
+Increase version of
 
+> package.json > version
+
+> src-tauri/Cargo.toml > version
+
+> npm run tauri:build
