@@ -40,6 +40,14 @@ struct Reply {
   data: String,
 }
 
+impl Clone for Reply {
+  fn clone(&self) -> Self {
+    Reply {
+      data: self.data.to_string(),
+    }
+  }
+}
+
 pub struct MyState(HashMap<String, String>);
 
 fn main() {

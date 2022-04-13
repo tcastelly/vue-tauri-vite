@@ -1,5 +1,5 @@
 declare module 'src-wasm' {
-  export * from '@/../src-wasm/pkg/src-wasm.d';
+  export * from '@/../src-wasm/pkg';
 
   export default function (): Promise<void>;
 }
