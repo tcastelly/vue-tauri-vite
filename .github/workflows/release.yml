@@ -17,12 +17,12 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install Go
         uses: actions/setup-go@v2
         with:
-          go-version: ${{ matrix.go-version }}
+          go-version: 18.0
 
       - name: Checkout code
         uses: actions/checkout@v2
