@@ -1,6 +1,6 @@
 [package]
 name = "app"
-version = "0.1.1"
+version = "0.1.2"
 description = "A Tauri App"
 authors = ["you"]
 license = ""
@@ -22,3 +22,10 @@ tauri = { version = "1.0.0-rc.6", features = ["api-all"] }
 [features]
 default = [ "custom-protocol" ]
 custom-protocol = [ "tauri/custom-protocol" ]
+
+# enable debug
+# [profile.release.package.wry]
+# debug = true
+# debug-assertions = true
+# ./node_modules/.bin/tauri build --debug
+# ./src-tauri/target/debug/bundle/appimage/vite-vue_0.1.1_amd64.AppImage

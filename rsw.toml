@@ -25,7 +25,7 @@ using = "wasm-pack"
 #! this field needs to be configured when `using = "user"`
 #! `using = "wasm-pack"` or `using = "rsw"`, this field will be ignored
 #! copy all files in this directory
-dir = "my-template"
+# dir = "my-template"
 
 #! ################# NPM Package #################
 
