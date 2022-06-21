@@ -41,16 +41,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y webkit2gtk-4.0
 
-      - name: install app dependencies
+      - name: install dependencies
         run: |
+          cargo install wasm-pack rsw
           npm ci --force
 
       - name: generate osx cargo config
         if: matrix.platform == 'macos-latest'
         run: make init_osx_cfg
-
-      - name: install rsw
-        run: cargo install rsw
 
       - name: tauri release
         uses: tauri-apps/tauri-action@v0
