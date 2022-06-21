@@ -5,7 +5,7 @@
 use tauri_build::{try_build, Attributes, WindowsAttributes};
 
 fn main() {
-  let path = "../src-go";
+  let path = "./src-go";
   let lib = "gophernize";
 
   println!("cargo:rustc-link-search=native={}", path);

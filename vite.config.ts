@@ -8,11 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    ViteRsw({
-      crates: [
-        'src-wasm',
-      ],
-    }),
+    ViteRsw(),
   ],
   resolve: {
     alias: {
