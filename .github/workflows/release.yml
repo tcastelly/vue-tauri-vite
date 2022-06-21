@@ -49,6 +49,9 @@ jobs:
         if: matrix.platform == 'macos-latest'
         run: make init_osx_cfg
 
+      - name: install rsw
+        run: cargo install rsw
+
       - name: tauri release
         uses: tauri-apps/tauri-action@v0
         env:
