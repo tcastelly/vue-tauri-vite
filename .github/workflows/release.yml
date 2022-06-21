@@ -43,7 +43,8 @@ jobs:
 
       - name: install dependencies
         run: |
-          cargo install wasm-pack rsw
+          curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+          cargo install rsw
           npm ci --force
 
       - name: generate osx cargo config
