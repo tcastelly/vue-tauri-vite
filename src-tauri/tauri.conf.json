@@ -1,7 +1,7 @@
 {
   "package": {
     "productName": "tcy-demo",
-    "version": "0.2.5"
+    "version": "0.2.6"
   },
   "build": {
     "distDir": "../dist",
@@ -13,7 +13,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "www.t-az.com",
+      "identifier": "tcy.io",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -58,7 +58,7 @@
       }
     ],
     "security": {
-      "csp": "default-src blob: data: filesystem: ws: http: https: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+      "csp": "script-src 'wasm-unsafe-eval' default-src blob: data: filesystem: ws: http: https: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     }
   }
 }
