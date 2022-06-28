@@ -30,7 +30,7 @@ using = "wasm-pack"
 #! ################# NPM Package #################
 
 #! When there is only `name`, other fields will use the default configuration
-#! -------- package: rsw-hello --------
+#! -------- package: src-wasm --------
 [[crates]]
 #! npm package name
 name = "src-wasm"
