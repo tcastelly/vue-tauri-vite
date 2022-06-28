@@ -40,4 +40,6 @@ Increase version of
 
 > src-tauri/Cargo.toml > version
 
+> src-tauri/tauri.conf.json > version
+
 > npm run tauri:build
