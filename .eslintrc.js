@@ -20,7 +20,7 @@ module.exports = {
     // let ts manage modules
     'import/no-extraneous-dependencies': 0,
 
-    // will be resolve by TS
+    // will be resolved by TS
     'import/no-unresolved': 0,
 
     // fix export/import default
@@ -32,6 +32,5 @@ module.exports = {
 
     // fix tsx component
     'import/prefer-default-export': 0,
-
   },
 };
