@@ -22,8 +22,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-wasm-rsut/pkg
-wasm-rsut/target
+src-wasm/pkg
+src-wasm/target
 
 # Editor directories and files
 .idea
