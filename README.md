@@ -6,13 +6,14 @@ In this project I try to show how to use Tauri application with multiple technol
 - Vite for the client bundle
 - Go and Rust as backend thanks to ffi
 
-### Launch dev
+## Launch dev
 
 ⚠️ Note: Open two terminal windows, execute `npm run watch` in the first and `npm run tauri:dev` in the second. **The order of execution is important, do not close the first window!**
 
-### Update Dependencies
+## Update Dependencies
 
-- Javascript part: `ncu`
+- Javascript part:
+  - package.json > "@tauri-apps/api"
 - Rust part: 
   > cd src-tauri
 
@@ -21,12 +22,13 @@ In this project I try to show how to use Tauri application with multiple technol
   - https://crates.io/crates/tauri/versions
   - https://crates.io/crates/tauri-build/versions
 
-### Release build
-## Github Actions
+## Release build
+
+### Github Actions
 Take a look to:
 https://github.com/tcastelly/vue-tauri-vite/blob/master/.github/workflows/release.yml
 
-## Manual
+### Manual release
 Increase version of
 
 > package.json > version
