@@ -21,4 +21,4 @@ buildc:
 # it s not possible to use RUSTFLAGS env
 # because wasm project will should not use it
 init_osx_cfg:
-	cp .cargo/config_disabled .cargo/config
+	cp ./src-tauri/.cargo/config_disabled ./src-tauri/.cargo/config

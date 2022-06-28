@@ -41,8 +41,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y webkit2gtk-4.0
 
-      - name: install app dependencies
+      - name: install dependencies
         run: |
+          curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+          cargo install rsw
           npm ci --force
 
       - name: generate osx cargo config

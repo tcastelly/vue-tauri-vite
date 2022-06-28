@@ -8,6 +8,11 @@ In this project I try to show how to use Tauri application with multiple technol
 
 ## Launch dev
 
+> cargo install rsw
+
+[wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
+> curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
 ⚠️ Note: Open two terminal windows, execute `npm run watch` in the first and `npm run tauri:dev` in the second. **The order of execution is important, do not close the first window!**
 
 ## Update Dependencies
