@@ -10,7 +10,7 @@ target
 .rsw
 
 src-tauri/tauri.js
-.cargo/config
+src-tauri/.cargo/config
 
 # local env files
 .env.local
