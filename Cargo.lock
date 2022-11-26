@@ -55,7 +55,7 @@ checksum = "1485d4d2cc45e7b201ee3767015c96faa5904387c9d87c6efdd0fb511f12d305"
 
 [[package]]
 name = "app"
-version = "0.1.6"
+version = "0.1.7"
 dependencies = [
  "serde",
  "serde_json",
@@ -2555,7 +2555,7 @@ dependencies = [
 
 [[package]]
 name = "src-wasm"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "wasm-bindgen",
 ]

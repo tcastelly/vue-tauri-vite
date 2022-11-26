@@ -1,8 +1,8 @@
 [package]
 name = "src-wasm"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Thomas <thomas@tcy.io>"]
-edition = "2018"
+edition = "2021"
 
 # https://github.com/rustwasm/wasm-pack/issues/886
 # https://developers.google.com/web/updates/2019/02/hotpath-with-wasm

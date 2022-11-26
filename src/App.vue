@@ -6,11 +6,11 @@
   <div>
     Backend answer: {{ res }}
 
-    <button @click="log">Log me</button>
+    <button @click="log" type="button">Log me</button>
   </div>
 
   <div>
-    <button @click="getState">Get State</button>
+    <button @click="getState" type="button">Get State</button>
   </div>
   <Add />
 </template>

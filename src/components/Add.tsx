@@ -16,14 +16,16 @@ export default defineComponent({
       res.value = add(+nb1.value, +nb2.value);
     });
 
-    return () => <>
-      <h3>With Wasm (Rust)</h3>
+    return () => (
+      <>
+        <h3>With Wasm (Rust)</h3>
 
-      <input v-model={nb1.value} placeholder='Number to add' />
-      +
-      <input v-model={nb2.value} placeholder='Number to add' />
-      =
-      <span>{res.value}</span>
-    </>;
+        <input v-model={nb1.value} placeholder="Number to add" />
+        +
+        <input v-model={nb2.value} placeholder="Number to add" />
+        =
+        <span>{res.value}</span>
+      </>
+    );
   },
 });
