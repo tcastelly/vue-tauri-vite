@@ -1,6 +1,6 @@
 {
   "name": "vite-vue",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "MIT",
   "scripts": {
     "prebuild": "rsw build",
@@ -24,14 +24,14 @@
     "@tauri-apps/api": "^1.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
-    "vite": "^4.0.1",
+    "vite": "^4.0.3",
     "vite-plugin-rsw": "^2.0.11",
     "vue": "^3.2.45"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
