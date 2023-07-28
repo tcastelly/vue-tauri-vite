@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite';
 import path from 'path';
+import { defineConfig } from 'vite';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import vue from '@vitejs/plugin-vue';
-import ViteRsw from 'vite-plugin-rsw';
+import { ViteRsw } from 'vite-plugin-rsw';
 
 export default defineConfig({
   plugins: [

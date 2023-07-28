@@ -1,4 +1,9 @@
-import type { Ref, SetupContext } from 'vue';
+import type {
+  ExtractDefaultPropTypes,
+  ExtractPropTypes,
+  Ref,
+  SetupContext,
+} from 'vue';
 
 type Unwrap<T> = T extends Ref<infer U> ? U : T;
 
@@ -30,6 +35,11 @@ export type Context<T extends (...args: any[]) => any, Z extends {
 } & {
   listeners: { [id: string]: (args?: any) => any },
   $attrs: Record<string, unknown>,
-  $slots: Z extends { vSlots ?: Slots } ? Z['vSlots'] : never,
+  $slots: Z extends { vSlots?: Slots } ? Z['vSlots'] : never,
   $emit: SetupContext['emit'],
 } & Omit<Z, 'vSlots'>;
+
+type PartiallyOptional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+
+export type ExternalProps<T extends Record<string | number | symbol, object>>
+  = PartiallyOptional<ExtractPropTypes<T>, keyof ExtractDefaultPropTypes<T>>;
