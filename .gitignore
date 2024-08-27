@@ -9,8 +9,8 @@ target
 *.h
 .rsw
 
-src-tauri/tauri.js
-.cargo/config.toml
+# generate file
+src-tauri/gen
 
 # local env files
 .env.local

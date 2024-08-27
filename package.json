@@ -21,7 +21,7 @@
     "watch": "rsw watch"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.6.0",
+    "@tauri-apps/api": "^2.0.0-rc.3",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "fix": "^0.0.6",
@@ -30,15 +30,15 @@
     "vue": "^3.4.38"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.6.1",
-    "@typescript-eslint/eslint-plugin": "^8.3.0",
-    "@typescript-eslint/parser": "^8.3.0",
+    "@tauri-apps/cli": "^2.0.0-rc.7",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-typescript": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-airbnb-with-typescript": "^8.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
-    "eslint": "^8.45.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-vue": "^9.27.0",
     "lint-staged": "^15.2.9",

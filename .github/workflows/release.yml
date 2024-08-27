@@ -47,10 +47,6 @@ jobs:
           cargo install rsw
           npm ci --force
 
-      - name: generate osx cargo config
-        if: matrix.platform == 'macos-latest'
-        run: make init_osx_cfg
-
       - name: tauri release
         uses: tauri-apps/tauri-action@v0
         env:

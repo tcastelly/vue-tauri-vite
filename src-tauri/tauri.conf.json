@@ -1,53 +1,14 @@
 {
-  "package": {
-    "productName": "tcy-demo",
-    "version": "0.2.13"
-  },
+  "productName": "tcy-demo",
+  "version": "0.2.13",
+  "identifier": "tc.je",
   "build": {
-    "distDir": "../dist",
-    "devPath": "http://localhost:3222",
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:3222",
     "beforeDevCommand": "npm run start",
     "beforeBuildCommand": "npm run build"
   },
-  "tauri": {
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "tcy.io",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "resources": [],
-      "copyright": "",
-      "category": "DeveloperTool",
-      "shortDescription": "",
-      "longDescription": "",
-      "deb": {
-        "depends": []
-      },
-      "macOS": {
-        "frameworks": [],
-        "minimumSystemVersion": "",
-        "exceptionDomain": "",
-        "signingIdentity": null,
-        "entitlements": null
-      },
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
-    },
-    "updater": {
-      "active": false
-    },
-    "allowlist": {
-      "all": true
-    },
+  "app": {
     "windows": [
       {
         "title": "TCY Demo",
@@ -59,6 +20,34 @@
     ],
     "security": {
       "csp": "script-src 'wasm-unsafe-eval' default-src blob: data: filesystem: ws: http: https: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": [],
+    "copyright": "",
+    "category": "DeveloperTool",
+    "shortDescription": "",
+    "longDescription": "",
+    "macOS": {
+      "frameworks": [],
+      "minimumSystemVersion": "",
+      "exceptionDomain": "",
+      "signingIdentity": null,
+      "entitlements": null
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
     }
   }
 }

@@ -18,7 +18,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { listen, emit } from '@tauri-apps/api/event';
-import { invoke } from '@tauri-apps/api/tauri';
+import { invoke } from '@tauri-apps/api/core';
 import HelloTsx from './components/HelloTsx';
 import HelloWorld from './components/HelloWorld.vue';
 import Add from './components/Add';
